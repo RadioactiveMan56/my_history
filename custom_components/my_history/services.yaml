@@ -1,0 +1,23 @@
+# services.yaml for My History integration
+
+update_selections:
+  name: Update entity selections
+  description: Update which entities are excluded from history and retention days
+  fields:
+    tracked_entities:
+      name: Tracked entities
+      description: List of entity IDs to exclude from history
+      required: true
+      example: '["light.living_room", "switch.kitchen"]'
+      selector:
+        object:
+    purge_keep_days:
+      name: Purge keep days
+      description: Number of days to keep history for excluded entities
+      required: false
+      default: 30
+      selector:
+        number:
+          min: 1
+          max: 365
+          unit_of_measurement: days
