@@ -1,10 +1,5 @@
 # My History for Home Assistant
 
-[![GitHub Release][releases-shield]][releases]
-[![HACS][hacs-shield]][hacs]
-[![GitHub Activity][commits-shield]][commits]
-[![License][license-shield]](LICENSE)
-
 **A custom integration that provides a user-friendly sidebar panel to manage which entities are excluded from Home Assistant's history/recorder database.**
 
 ## 📖 Overview
@@ -12,8 +7,7 @@
 My History gives you a simple web interface to control what gets stored in your Home Assistant database. Instead of manually editing `configuration.yaml` and restarting, you can:
 
 - **Exclude entities** from being recorded
-- **Set purge retention days** per entity
-- **Save changes instantly** without restarts
+- **Set purge retention days**
 
 The integration generates a `recorder_config.yaml` file automatically and integrates seamlessly with Home Assistant's built-in recorder component.
 
@@ -22,7 +16,6 @@ The integration generates a `recorder_config.yaml` file automatically and integr
 - 🖥️ **Sidebar Panel** - A clean web interface accessible from your Home Assistant sidebar
 - 📝 **Entity Exclusion** - Select which entities should NOT be recorded in history
 - ⏱️ **Purge Control** - Set how many days of history to keep for excluded entities
-- ⚡ **No Restart Required** - Changes take effect immediately
 - 🔧 **Auto-Generated Config** - Creates and updates `recorder_config.yaml` automatically
 - 🎯 **Works with Recorder** - Fully compatible with Home Assistant's native recorder component
 
@@ -60,10 +53,3 @@ After installation:
 
 The integration stores settings in `recorder_config.yaml`:
 
-```yaml
-purge_keep_days: 30
-exclude:
-  entities:
-    - sensor.uptime
-    - sensor.last_boot
-    - binary_sensor.*_battery
